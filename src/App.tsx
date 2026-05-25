@@ -98,17 +98,17 @@ export default function App() {
         <motion.div 
           animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] bg-cyan-600/30 blur-[120px] rounded-full" 
+          className="absolute top-[20%] left-[10%] w-[50vw] h-[50vw] bg-cyan-600/30 blur-[120px] rounded-full" 
         />
         <motion.div 
           animate={{ scale: [1, 1.5, 1], rotate: [0, -90, 0] }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute top-[20%] -right-[10%] w-[60vw] h-[60vw] bg-fuchsia-600/20 blur-[150px] rounded-full" 
+          className="absolute top-[20%] right-[10%] w-[60vw] h-[60vw] bg-fuchsia-600/20 blur-[150px] rounded-full" 
         />
         <motion.div 
           animate={{ scale: [1, 1.3, 1], y: [0, -100, 0] }}
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -bottom-[10%] left-[20%] w-[40vw] h-[40vw] bg-blue-600/20 blur-[100px] rounded-full" 
+          className="absolute bottom-[10%] left-[20%] w-[40vw] h-[40vw] bg-blue-600/20 blur-[100px] rounded-full" 
         />
       </div>
 
@@ -119,10 +119,10 @@ export default function App() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 w-full max-w-4xl"
       >
-        <div className="backdrop-blur-3xl bg-white/[0.02] border border-white/10 rounded-[2rem] shadow-2xl shadow-black/50 p-6 sm:p-10 flex flex-col lg:flex-row gap-10 items-center lg:items-stretch">
+        <div className="backdrop-blur-3xl bg-white/2 border border-white/10 rounded-4xl shadow-2xl shadow-black/50 p-6 sm:p-10 flex flex-col lg:flex-row gap-10 items-center lg:items-stretch">
           
           {/* Left Column: Board */}
-          <div className="relative w-full max-w-[400px] aspect-square shrink-0">
+          <div className="relative w-full max-w-100px aspect-square shrink-0">
             {/* The Grid */}
             <div className="grid grid-cols-3 gap-3 w-full h-full p-3 bg-black/20 rounded-3xl border border-white/5 shadow-inner">
               {board.map((cell, index) => {
@@ -138,7 +138,7 @@ export default function App() {
                       opacity: winner && !isWinningCell ? 0.2 : 1
                     }}
                     transition={{ duration: 0.3 }}
-                    className="relative flex items-center justify-center w-full h-full rounded-2xl bg-white/[0.03] border border-white/10 shadow-lg cursor-pointer disabled:cursor-default"
+                    className="relative flex items-center justify-center w-full h-full rounded-2xl bg-white/3] border border-white/10 shadow-lg cursor-pointer disabled:cursor-default"
                     disabled={winner !== null || draw}
                   >
                     <AnimatePresence mode="popLayout">
